@@ -1,0 +1,12 @@
+form {
+    display: flex;
+    flex-direction: column;
+}
+fieldset {
+    display: flex;
+    flex-direction: column;
+}
+input[type=submit] {
+    margin-top: 20px;
+    width: 15%;
+}
