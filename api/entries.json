@@ -1,0 +1,22 @@
+{ 
+        "entries": [
+        {
+            "date": "5/24/2019",
+            "concepts": "JS",
+            "mood": "ok",
+            "entry": "asdfjkl"
+        },
+        {
+            "date": "6/4/2019",
+            "concepts": "Functions & Logic",
+            "mood": "frustrated",
+            "entry": "This is entry 2"
+        },
+        {
+            "date": "6/14/2019",
+            "concepts": "Modualarizing Code in Javascript",
+            "mood": "neutral",
+            "entry": "This is entry 3"
+        }
+    ]
+}
