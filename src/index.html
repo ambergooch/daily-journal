@@ -20,7 +20,7 @@
         </fieldset>
         <fieldset>
             <label for="journalEntry">Journal Entry</label>
-            <input type="text" name="journalEntry" id="journalEntry">
+            <textarea name="journalEntry" id="journalEntry" rows="10" cols="50">What did you learn today?</textarea>
         </fieldset>
         <fieldset>
             <label for="dailyMood">Mood for the day:</label>
@@ -33,8 +33,25 @@
                 <option value="good">Good</option>
             </select>
         </fieldset>
+        <fieldset>
+            <label for="slider">How well did you grasp today's material?</label>
+            <input type="range" list="steplist" name="slider" id="slider" min="1" max="5" step="1" oninput="sliderChange(this.value)">
+            <output id="sliderVal"></output>
+            <datalist id="steplist">
+                <option>1</option>
+                <option >2</option>
+                <option value="3" label="3">3</option>
+                <option value="4" label="4">4</option>
+                <option value="5" label="5">5</option>
+            </datalist>
+        </fieldset>
         <input type="submit" value="Record Journal Entry">
     </form>
+
+    <article class="entryLog">
+
+    </article>
+
     <script src="scripts/journal.js"></script>
 </body>
 </html>
