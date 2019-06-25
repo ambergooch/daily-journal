@@ -9,29 +9,29 @@
 </head>
 <body>
     <h1>Daily Journal</h1>
-    <form action="">
+    <!-- <form action=""> -->
         <fieldset>
             <label for="journalDate">Date of entry:</label>
-            <input type="date" name="journalDate" id="journalDate">
+            <input type="date" name="journalDate" id="journalDate" required>
         </fieldset>
         <fieldset>
             <label for="concepts">Concepts covered:</label>
-            <input type="text" name="concepts" id="concepts">
-        </fieldset>
-        <fieldset>
-            <label for="journalEntry">Journal Entry</label>
-            <textarea name="journalEntry" id="journalEntry" rows="10" cols="50">What did you learn today?</textarea>
+            <input type="text" name="concepts" id="concepts" pattern="[a-zA-Z0-9!:;(){}]{1,}">
         </fieldset>
         <fieldset>
             <label for="dailyMood">Mood for the day:</label>
-            <select name="dailyMood" id="dailyMood">
+            <select name="dailyMood" id="dailyMood" required>
                 <option value="frustrated">Frustrated</option>
                 <option value="excited">Excited</option>
                 <option value="optimistic">Optimistic</option>
-                <option value="indifferent">Indifferent</option>
+                <option value="confused">Confused</option>
                 <option value="neutral">Neutral</option>
                 <option value="good">Good</option>
             </select>
+        </fieldset>
+        <fieldset>
+            <label for="journalEntry">Journal Entry</label>
+            <textarea name="journalEntry" id="journalEntry" rows="10" cols="50" placeholder="What did you learn today?" pattern="[a-zA-Z0-9!:;(){}]{1,}" required></textarea>
         </fieldset>
         <fieldset>
             <label for="slider">How well did you grasp today's material?</label>
@@ -45,13 +45,39 @@
                 <option value="5" label="5">5</option>
             </datalist>
         </fieldset>
-        <input type="submit" value="Record Journal Entry">
-    </form>
+        <input type="submit" id="submit-btn" value="Record Journal Entry">
+    <!-- </form> -->
+        <fieldset class="radio-fieldset">
+            <legend>Filter journal entries by mood</legend>
+            <input type="radio" name="mood-radio" id="frustrated" value="frustrated">
+            <label for="frustrated">Frustrated</label>
+
+            <input type="radio" name="mood-radio" id="excited" value="excited">
+            <label for="excited">Excited</label>
+
+            <input type="radio" name="mood-radio" id="optimistic" value="optimistic">
+            <label for="optimistic">Optimistic</label>
+
+            <input type="radio" name="mood-radio" id="confused" value="confused">
+            <label for="confused">Confused</label>
+
+            <input type="radio" name="mood-radio" id="neutral" value="neutral">
+            <label for="neutral">Neutral</label>
+
+            <input type="radio" name="mood-radio" id="good" value="good">
+            <label for="good">Good</label>
+
+            <input type="radio" name="mood-radio" id="all" value="all">
+            <label for="good">All</label>
+        </fieldset>
 
     <article class="entryLog">
 
     </article>
 
+    <script src="scripts/data.js"></script>
+    <script src="scripts/entriesDOM.js"></script>
+    <script src="scripts/entryComponent.js"></script>
     <script src="scripts/journal.js"></script>
 </body>
 </html>
