@@ -1,9 +1,3 @@
-const API = {
-    getJournalEntries () {
-        return fetch("http://localhost:3000/entries")
-            .then(response => response.json())
-    }
-}
 // fetch("http://localhost:3000/entries") // Fetch from the API
 //     .then(data => data.json())  // Parse as JSON
 //     .then(journalEntries => {
@@ -11,8 +5,15 @@ const API = {
 //             document.querySelector(".entryLog").innerHTML += makeJournalEntryComponent(entries)
 //             // renderJournalEntries(journalEntries)
 //         })
-        
+
 //     })
+
+const API = {
+    getJournalEntries () {
+        return fetch("http://localhost:3000/entries")
+            .then(response => response.json())
+    }
+}
 
 function saveJournalEntry (newEntry) {
     return fetch ("http://localhost:3000/entries", {
@@ -33,3 +34,14 @@ function deleteJournalEntry(id) {
     })
   }
 
+  function editJournalEntry(editedEntry) {
+  return fetch(`http://localhost:3000/entries/${editedEntry.id}`, {
+    method: "PUT",
+    headers: {
+        "Content-Type": "application/json"
+    },
+    body: JSON.stringify(editedEntry)
+})
+.then(res => res.json())
+
+  }
