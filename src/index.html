@@ -47,33 +47,36 @@
         </fieldset>
         <input type="submit" id="submit-btn" value="Record Journal Entry">
     <!-- </form> -->
-        <fieldset class="radio-fieldset">
-            <legend>Filter journal entries by mood</legend>
-            <input type="radio" name="mood-radio" id="frustrated" value="frustrated">
-            <label for="frustrated">Frustrated</label>
+        <section class="filter-search">
+            <fieldset class="radio-fieldset">
+                <legend>Filter journal entries by mood</legend>
+                <input type="radio" name="mood-radio" id="frustrated" value="frustrated">
+                <label for="frustrated">Frustrated</label>
 
-            <input type="radio" name="mood-radio" id="excited" value="excited">
-            <label for="excited">Excited</label>
+                <input type="radio" name="mood-radio" id="excited" value="excited">
+                <label for="excited">Excited</label>
 
-            <input type="radio" name="mood-radio" id="optimistic" value="optimistic">
-            <label for="optimistic">Optimistic</label>
+                <input type="radio" name="mood-radio" id="optimistic" value="optimistic">
+                <label for="optimistic">Optimistic</label>
 
-            <input type="radio" name="mood-radio" id="confused" value="confused">
-            <label for="confused">Confused</label>
+                <input type="radio" name="mood-radio" id="confused" value="confused">
+                <label for="confused">Confused</label>
 
-            <input type="radio" name="mood-radio" id="neutral" value="neutral">
-            <label for="neutral">Neutral</label>
+                <input type="radio" name="mood-radio" id="neutral" value="neutral">
+                <label for="neutral">Neutral</label>
 
-            <input type="radio" name="mood-radio" id="good" value="good">
-            <label for="good">Good</label>
+                <input type="radio" name="mood-radio" id="good" value="good">
+                <label for="good">Good</label>
 
-            <input type="radio" name="mood-radio" id="all" value="all">
-            <label for="good">All</label>
-        </fieldset>
-
-    <article class="entryLog">
-
-    </article>
+                <input type="radio" name="mood-radio" id="all" value="all">
+                <label for="good">All</label>
+            </fieldset>
+            <fieldset class="search-fieldset">
+                <legend>Search journal entries</legend>
+                <input type="text" name="search-input" id="search-input" placeholder="Enter search term">
+            </fieldset>
+        </section>
+    <article class="entryLog"></article>
 
     <script src="scripts/data.js"></script>
     <script src="scripts/entriesDOM.js"></script>

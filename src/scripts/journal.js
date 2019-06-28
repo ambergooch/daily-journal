@@ -16,13 +16,11 @@ document.querySelector("#submit-btn").addEventListener("click", event => {
     const journalEntry = document.querySelector("#journalEntry").value
     const newJournalEntry = entryFactory(journalDate, concepts, dailyMood, journalEntry)
 
-
     saveJournalEntry(newJournalEntry)
     .then( data => data.json())
     .then( dataJS => {
         getAndDisplay()
     })
-
 })
 
 function entryFactory (journalDate, concept, dailyMood, journalEntry) {
@@ -53,3 +51,33 @@ moodBtnElements.forEach(radioButton =>{
     })
 })
 
+const searchInput = document.querySelector("#search-input")
+searchInput.addEventListener("keydown", event => {
+    if (event.keyCode === 13) {
+        console.log("keypress")
+        const searchTerm = event.target.value
+        API.getJournalEntries().then(entries => {
+           const foundEntries = entries.filter(entry => {
+                for (const value of Object.values(entry)) {
+                    if (isNaN(value) && value.toLowerCase().includes(searchTerm.toLowerCase())) {
+                        entryLog.innerHTML = ""
+                        console.log(entry)
+                        return entry
+                    }
+                }
+            })
+            renderJournalEntries(foundEntries)
+        });
+      }
+    })
+
+
+
+var today = new Date().toLocaleDateString('default', {
+	month : 'short',
+	day : 'numeric',
+    year : 'numeric',
+    hour: 'numeric',
+    minute: 'numeric'
+})
+console.log(today)

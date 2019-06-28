@@ -8,9 +8,31 @@ input[type=submit] {
     width: 15%;
 }
 
+.filter-search {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
 .radio-fieldset {
-    display: block;
+    display: inline-block;
     margin-top: 20px;
+    width: 45%;
+}
+
+.radio-fieldset input {
+    margin-left: 6px;
+}
+
+.search-fieldset{
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    width: 45%
+}
+
+#search-input {
+    width: 98%
 }
 
 #edit-fieldset {
