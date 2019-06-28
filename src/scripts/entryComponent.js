@@ -25,7 +25,7 @@ function makeJournalEntryComponent (journalEntry) {
     childDiv.setAttribute("id", `delete-${journalEntry.id}`)
     childDiv.innerHTML = `
         <div>
-        <h3>This is a journal entry</h3>
+        <h3>${journalEntry.concept}</h3>
         <strong>Date:</strong> ${journalEntry.date}
         <br>
         <strong>Concepts:</strong> ${journalEntry.concept}
@@ -96,7 +96,6 @@ function addEditFormToDOM(entryToEdit, editForm) {
       let entryId = document.querySelector("#journal-id").value
       let editedEntry = entryFactory(date, concept, mood, entry)
       console.log(entryId)
-      console.log(editedEntry.id)
       editedEntry.id = entryId
       editJournalEntry(editedEntry)
       .then( () => {
