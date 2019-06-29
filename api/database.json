@@ -1,67 +1,87 @@
 {
+  "moods": [
+    {
+        "id": 1,
+        "label": "Frustrated"
+    },
+    {
+        "id": 2,
+        "label": "Excited"
+    },
+    {
+        "id": 3,
+        "label": "Optimistic"
+    },
+    {
+        "id": 4,
+        "label": "Confused"
+    },
+    {
+        "id": 5,
+        "label": "Neutral"
+    },
+    {
+        "id": 6,
+        "label": "Good"
+    }
+  ],
+
   "entries": [
     {
       "date": "2019-06-24",
       "concept": "Modualarizing Code in Javascript",
-      "mood": "frustrated",
+      "moodId": 1,
       "entry": "This is entry 3",
       "id": 3
     },
     {
       "date": "2019-06-28",
       "concept": "hard stuff that isn't as hard anymore",
-      "mood": "neutral",
+      "moodId": 5,
       "entry": "hi, I am writing from the future",
       "id": 4
     },
     {
       "date": "2019-06-12",
       "concept": "api",
-      "mood": "frustrated",
+      "moodId": 1,
       "entry": "my concepts wont print",
       "id": 6
     },
     {
       "date": "2019-06-21",
       "concept": "print",
-      "mood": "frustrated",
+      "moodId": 1,
       "entry": "my concepts still don't work",
       "id": 7
     },
     {
       "date": "2019-06-27",
       "concept": "Editing database ",
-      "mood": "confused",
+      "moodId": 4,
       "entry": "This is harder than I expected",
       "id": 15
     },
     {
       "date": "2019-06-01",
       "concept": "Web API ",
-      "mood": "confused",
+      "moodId": 4,
       "entry": "Learned about API fetch calls",
       "id": 16
     },
     {
       "date": "2019-06-02",
       "concept": "Web API, Part 2",
-      "mood": "optimistic",
+      "moodId": 3,
       "entry": "Things started making more sense",
       "id": 17
     },
     {
       "date": "2019-06-04",
       "concept": "Functions",
-      "mood": "excited",
+      "moodId": 2,
       "entry": "Wrote long, complicated function and it actually worked",
       "id": 18
-    },
-    {
-      "date": "",
-      "concept": "",
-      "mood": "frustrated",
-      "entry": "",
-      "id": 19
     }
   ]
 }

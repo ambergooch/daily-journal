@@ -8,4 +8,4 @@ function getAndDisplay() {
     API.getJournalEntries()
     .then(renderJournalEntries)
 }
-
+// export {renderJournalEntries, getAndDisplay}

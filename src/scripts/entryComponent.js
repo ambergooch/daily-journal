@@ -15,7 +15,8 @@
 
 // const component = Object.create(makeJournalEntryComponent)
 
-
+// import {getAndDisplay} from "./entriesDOM.js"
+// import {deleteJournalEntry, editJournalEntry} from "./data.js"
 
 function makeJournalEntryComponent (journalEntry) {
     let parentDiv = document.createElement("div")

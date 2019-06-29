@@ -33,3 +33,5 @@ function editJournalEntry(editedEntry) {
         body: JSON.stringify(editedEntry)
     })
 }
+
+export {API, saveJournalEntry, deleteJournalEntry, editJournalEntry}

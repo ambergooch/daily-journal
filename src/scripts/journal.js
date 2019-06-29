@@ -1,3 +1,6 @@
+// import {renderJournalEntries, getAndDisplay} from "./entriesDOM.js"
+// import "./data.js"
+
 function sliderChange(value) {
     document.getElementById('sliderVal').innerHTML = value;
     }
