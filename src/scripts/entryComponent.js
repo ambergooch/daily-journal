@@ -15,8 +15,9 @@
 
 // const component = Object.create(makeJournalEntryComponent)
 
-// import {getAndDisplay} from "./entriesDOM.js"
-// import {deleteJournalEntry, editJournalEntry} from "./data.js"
+import {getAndDisplay} from "./entriesDOM.js"
+import {deleteJournalEntry, editJournalEntry} from "./data.js"
+import {entryFactory} from "./journal.js"
 
 function makeJournalEntryComponent (journalEntry) {
     let parentDiv = document.createElement("div")
@@ -31,7 +32,7 @@ function makeJournalEntryComponent (journalEntry) {
         <br>
         <strong>Concepts:</strong> ${journalEntry.concept}
         <br>
-        <strong>Mood:</strong> ${journalEntry.mood}
+        <strong>Mood:</strong> ${journalEntry.mood.label}
         <p>${journalEntry.entry}</p>
         </div>
         `
@@ -104,3 +105,5 @@ function addEditFormToDOM(entryToEdit, editForm) {
       })
     })
   }
+
+  export {makeJournalEntryComponent}

@@ -1,10 +1,10 @@
-// import {renderJournalEntries, getAndDisplay} from "./entriesDOM.js"
-// import "./data.js"
+import {renderJournalEntries, getAndDisplay} from "./entriesDOM.js";
+import {API, saveJournalEntry} from "./data.js"
 
 function sliderChange(value) {
-    document.getElementById('sliderVal').innerHTML = value;
+    document.getElementById("sliderVal").innerHTML = value;
     }
-document.getElementById('slider').value = 5;
+document.getElementById("slider").value = 5;
 
 // objectWithGetterMethod.methodToGetData().then(functionThatRendersData)
 
@@ -74,13 +74,13 @@ searchInput.addEventListener("keydown", event => {
       }
     })
 
+export {entryFactory}
 
-
-var today = new Date().toLocaleDateString('default', {
-	month : 'short',
-	day : 'numeric',
-    year : 'numeric',
-    hour: 'numeric',
-    minute: 'numeric'
-})
-console.log(today)
+// var today = new Date().toLocaleDateString("default", {
+// 	month : 'short',
+// 	day : 'numeric',
+//     year : 'numeric',
+//     hour: 'numeric',
+//     minute: 'numeric'
+// })
+// console.log(today)

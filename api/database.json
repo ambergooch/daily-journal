@@ -1,31 +1,4 @@
 {
-  "moods": [
-    {
-        "id": 1,
-        "label": "Frustrated"
-    },
-    {
-        "id": 2,
-        "label": "Excited"
-    },
-    {
-        "id": 3,
-        "label": "Optimistic"
-    },
-    {
-        "id": 4,
-        "label": "Confused"
-    },
-    {
-        "id": 5,
-        "label": "Neutral"
-    },
-    {
-        "id": 6,
-        "label": "Good"
-    }
-  ],
-
   "entries": [
     {
       "date": "2019-06-24",
@@ -79,9 +52,42 @@
     {
       "date": "2019-06-04",
       "concept": "Functions",
-      "moodId": 2,
+      "moodId": "optimistic",
       "entry": "Wrote long, complicated function and it actually worked",
       "id": 18
+    },
+    {
+      "date": "2019-06-20",
+      "concept": "ag",
+      "mood": "good",
+      "entry": "fdafda",
+      "id": 19
+    }
+  ],
+  "moods": [
+    {
+      "id": 1,
+      "label": "Frustrated"
+    },
+    {
+      "id": 2,
+      "label": "Excited"
+    },
+    {
+      "id": 3,
+      "label": "Optimistic"
+    },
+    {
+      "id": 4,
+      "label": "Confused"
+    },
+    {
+      "id": 5,
+      "label": "Neutral"
+    },
+    {
+      "id": 6,
+      "label": "Good"
     }
   ]
 }
