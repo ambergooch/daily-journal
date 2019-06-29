@@ -30,7 +30,7 @@ function entryFactory (journalDate, concept, dailyMood, journalEntry) {
     return {
         date: journalDate,
         concept: concept,
-        mood: dailyMood,
+        moodId: dailyMood,
         entry: journalEntry
     }
 }

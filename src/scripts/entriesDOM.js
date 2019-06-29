@@ -6,7 +6,7 @@ const renderJournalEntries = (entries) => {
     }
 
 function getAndDisplay() {
-    entryLog.innerHTML = ""
+    document.querySelector(".entryLog").innerHTML = ""
     API.getJournalEntries()
     .then(renderJournalEntries)
 }
