@@ -55,6 +55,34 @@
       "moodId": 3,
       "entry": "Wrote long, complicated function and it actually worked",
       "id": 18
+    },
+    {
+      "date": "2019-06-29",
+      "concept": "Editing database 2",
+      "moodId": 4,
+      "entry": "How to use expand",
+      "id": 19
+    },
+    {
+      "date": "2019-06-29",
+      "concept": "JSON",
+      "moodId": 4,
+      "entry": "How to use expand",
+      "id": 21
+    },
+    {
+      "date": "2019-06-29",
+      "concept": "JSON",
+      "moodId": 4,
+      "entry": "How to use expand",
+      "id": 22
+    },
+    {
+      "date": "2019-07-01",
+      "concept": "Relating data",
+      "moodId": 3,
+      "entry": "I think it's finally working now",
+      "id": 23
     }
   ],
   "moods": [

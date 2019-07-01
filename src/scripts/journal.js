@@ -1,5 +1,5 @@
 import {renderJournalEntries, getAndDisplay} from "./entriesDOM.js";
-import {API, saveJournalEntry} from "./data.js"
+import {API, saveJournalEntry, getMoods} from "./data.js"
 
 function sliderChange(value) {
     document.getElementById("sliderVal").innerHTML = value;
@@ -12,12 +12,23 @@ API.getJournalEntries().then(renderJournalEntries)
 
 let entryLog = document.querySelector(".entryLog")
 
+function populateMoods () {
+    getMoods().then(moods => {
+        moods.forEach(mood => {
+            console.log(mood.id)
+            const moodSelect = document.querySelector("#dailyMood")
+            moodSelect.innerHTML += `<option value=${mood.id}>${mood.label}</option>`
+        })
+    })
+}
+populateMoods()
+
 document.querySelector("#submit-btn").addEventListener("click", event => {
     const journalDate = document.querySelector("#journalDate").value
     const concepts = document.querySelector("#concepts").value
-    const dailyMood = document.querySelector("#dailyMood").value
+    const dailyMoodId = parseInt(document.querySelector("#dailyMood").value)
     const journalEntry = document.querySelector("#journalEntry").value
-    const newJournalEntry = entryFactory(journalDate, concepts, dailyMood, journalEntry)
+    const newJournalEntry = entryFactory(journalDate, concepts, dailyMoodId, journalEntry)
 
     saveJournalEntry(newJournalEntry)
     .then( data => data.json())
@@ -26,11 +37,11 @@ document.querySelector("#submit-btn").addEventListener("click", event => {
     })
 })
 
-function entryFactory (journalDate, concept, dailyMood, journalEntry) {
+function entryFactory (journalDate, concept, dailyMoodId, journalEntry) {
     return {
         date: journalDate,
         concept: concept,
-        moodId: dailyMood,
+        moodId: dailyMoodId,
         entry: journalEntry
     }
 }

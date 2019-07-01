@@ -1,3 +1,4 @@
+import {API} from "./data.js"
 import {makeJournalEntryComponent} from "./entryComponent.js"
 
 const renderJournalEntries = (entries) => {
